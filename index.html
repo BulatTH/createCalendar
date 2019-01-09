@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- Подключение bootstrap 4 -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- es5-shim для поддержки старых браузеров -->
+	<script src="js/es5-shim.min.js"></script>
+	<!-- скрипт createCalendar.min.js для создания мини-календаря -->
+	<script src="js/createCalendar.min.js"></script>
+	
+
+	<title>createCalendar.js Example</title>
+</head>
+<body>
+	
+	<!-- Создаем контейнер, куда поместим сам календарь -->
+	<div class="container py-4">
+		<div class="row">
+			
+			<div class="col-8">
+				<p class="display-4 alert alert-success"> Задание </p>
+				<img src="Create table with calendar.PNG" class="w-100" alt="">
+			</div>
+
+			<div class="col-4 calendar px-0">
+				<p class="display-4 alert alert-success"> Решение </p>
+			</div>
+
+		</div>
+	</div>
+
+	<script>
+		/**
+		*	Создаем объект object={} с параметрами
+		* Параметр container - querySelector. Указывает куда помещать календарь
+		* year - год
+		* month - месяц
+		*/
+		let object = {
+			container: ".calendar",
+			//year: 2020,
+			//month: 6,
+		};
+
+		/* Создаем календарь */
+		createCalendar(object);
+	</script>
+
+</body>
+</html>
